@@ -1,0 +1,297 @@
+/*========== GOOGLE FONTS ==========*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,400&display=swap");
+
+/*========== START OF VARIABLES CSS ==========*/
+:root {
+  /*========== Colours ==========*/
+  --primary-colour: #00e472;
+  --hover-primary-colour: #02c262;
+  --secondary-colour-white: #ffffff;
+  --tertiary-colour: rgba(255, 255, 255, 0.46);
+  --primary-bg-colour: #181818;
+  --secondary-bg-colour: #212121;
+
+  /*========== Font and typography ==========*/
+  --body-font: "Poppins", sans-serif;
+  --lineheight: 1.6;
+  --main-headiing: 2.75rem;
+  --heading-1: 2rem;
+  --heading-2: 1.25rem;
+  --heading-3: 0, 875rem;
+  --paragraph-1: 1rem;
+  --button: 1.5rem;
+
+  /*========== Font Weight ==========*/
+  --bold: 700;
+  --semi-bold: 600;
+  --medium: 500;
+  --regular: 400;
+  --light: 300;
+  --thin: 200;
+
+  /*========== Max-width : Margin ==========*/
+  --max-width: 1600px;
+  --default-margin: 0px auto;
+}
+@media screen and (max-width: 1440px) {
+  :root {
+    /*========== Font and typography ==========*/
+    --main-headiing: 2.75rem;
+    --heading-1: 2rem;
+    --heading-2: 1.25rem;
+    --heading-3: 0.875rem;
+    --paragraph-1: 1rem;
+    --button: 1.5rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  :root {
+    /*========== Font and typography ==========*/
+    --main-headiing: 2.5rem;
+    --heading-1: 1.8rem;
+    --heading-2: 1.1rem;
+    --heading-3: 0.8rem;
+    --paragraph-1: 0.9rem;
+    --button: 1.2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  :root {
+    /*========== Font and typography ==========*/
+    --main-headiing: 2.2rem;
+    --heading-1: 1.6rem;
+    --heading-2: 1rem;
+    --heading-3: 0.7rem;
+    --paragraph-1: 0.8rem;
+    --button: 1rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  :root {
+    /*========== Font and typography ==========*/
+    --main-headiing: 2rem;
+    --heading-1: 1.4rem;
+    --heading-2: 0.8rem;
+    --heading-3: 0.6rem;
+    --paragraph-1: 0.8rem;
+    --button: 1rem;
+  }
+}
+
+/*========== END OF VARIABLE CSS ==========*/
+* {
+  font-family: var(--body-font);
+}
+html{
+  scroll-behavior: smooth;
+}
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  margin: 0px auto;
+  font-family: var(--body-font);
+
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0px;
+}
+a {
+  text-decoration: none;
+  font-family: var(--body-font);
+}
+section {
+  margin: 0px auto;
+  width: 100vw;
+}
+
+/* ====== START OF HEADER SECTION ========== */
+#header_section {
+  background-color: var(--primary-bg-colour);
+  position: sticky;
+  top: 0;
+  border-bottom: 0.1px solid rgba(255, 255, 255, 0.185);
+}
+#header_container {
+  max-width: var(--max-width);
+  margin: var(--default-margin);
+  padding-left: 10%;
+  padding-right: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 6rem;
+}
+
+.logo {
+  color: var(--secondary-colour-white);
+  font-size: var(--heading-2);
+  font-weight: var(--bold);
+}
+.logo-dot {
+  color: var(--primary-colour);
+}
+.Menu-List {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  box-sizing: border-box;
+}
+.menu-list-items a:hover {
+  color: var(--primary-colour);
+  border-bottom: 2px solid var(--primary-colour);
+  padding-bottom: 36px;
+}
+@media screen and (max-width: 768px) {
+  .Menu-List {
+    display: none;
+  }
+}
+.menu-list-items a {
+  font-weight: var(--heading-2);
+  text-decoration: none;
+  color: var(--secondary-colour-white);
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+  padding-bottom: 0.4rem;
+  box-sizing: border-box;
+}
+.menu-list-item.active {
+  font-weight: var(--semi-bold);
+  border-bottom: 3px solid var(--primary-colour);
+}
+
+/* ====== END OF HEADER SECTION ========== */
+
+/* ====== START OF HERO SECTION ========== */
+#hero_section {
+  background-color: var(--primary-bg-colour);
+  height: 90vh;
+}
+#hero_Container {
+  height: 80vh;
+  max-width: var(--max-width);
+  margin: var(--default-margin);
+  padding-left: 10%;
+  padding-right: 10%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: end;
+  align-items: center;
+}
+.hero_section_left h2 {
+  font-size: var(--heading-1);
+  color: var(--secondary-colour-white);
+  font-weight: var(--medium);
+  margin-bottom: 0.4rem;
+}
+.hero_section_left h1 {
+  font-size: var(--main-headiing);
+  font-weight: var(--semi-bold);
+  color: var(--primary-colour);
+  margin-bottom: 0.6rem;
+}
+.hero_section_left p {
+  font-size: var(--paragraph-1);
+  font-weight: var(--regular);
+  color: var(--tertiary-colour);
+  margin-bottom: 1rem;
+}
+.hero_section_cta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  width: 100%;
+}
+.cta_secondary {
+  border: 2px solid var(--secondary-colour-white);
+  color: var(--secondary-colour-white);
+  background-color: var(--primary-bg-colour);
+  font-size: var(--button);
+  padding: 1rem;
+  font-weight: var(--medium);
+  transition: 0.3s ease-in-out;
+}
+.cta_primary {
+  border: 2px solid var(--primary-colour);
+  color: var(--primary-bg-colour);
+  background-color: var(--primary-colour);
+  font-size: var(--button);
+  padding: 1rem;
+  font-weight: var(--medium);
+  transition: 0.3s ease-in-out;
+}
+.cta_secondary:hover,
+.cta_primary:hover {
+  background-color: var(--hover-primary-colour);
+  color: var(--primary-bg-colour);
+  border: none;
+}
+@media screen and (max-width: 768px) {
+  #hero_Container {
+    padding-top: 5vh;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 426px) {
+  .hero_section_cta {
+    gap: 0.8rem;
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ----------------- */
+
+.hero_section_right {
+  border: 2px solid var(--primary-colour);
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero_section_img {
+  padding: 10px;
+  border-radius: 100%;
+  width: 300px;
+  height: 300px;
+  /* width: 20vw;
+  height: 20vw; */
+}
+@media screen and (max-width: 768px) {
+  .hero_section_right {
+    margin-top: 2rem;
+  }
+}
+
+/* @media screen and (max-width: 1024px) {
+  .hero_section_img {
+    width: 25vw;
+    height: 25vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero_section_img {
+    width: 35vw;
+    height: 35vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  .hero_section_img {
+    width: 40vw;
+    height: 40vw;
+  }
+}
+@media screen and (max-width: 426px) {
+  .hero_section_img {
+    width: 50vw;
+    height: 50vw;
+  }
+} */
+.hero_section_right:hover {
+  background-color: var(--hover-primary-colour);
+}

@@ -1,0 +1,17 @@
+  /*========== Font and typography ==========*/
+  --body-font: "Poppins", sans-serif;
+  --lineheight: 1.6;
+  --main-headiing: 2.75rem;
+  --heading-1: 2rem;
+  --heading-2: 1.25rem;
+  --heading-3: 0, 875rem;
+  --paragraph-1: 1rem;
+  --button: 1.5rem;
+
+  /*========== Font Weight ==========*/
+  --bold: 700;
+  --semi-bold: 600;
+  --medium: 500;
+  --regular: 400;
+  --light: 300;
+  --thin: 200;

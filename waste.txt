@@ -1,0 +1,147 @@
+<!-- ========= BANNER SECTION ===== -->
+    <div id="banner_section">
+      <div id="banner_container">
+        <div class="banner_left_part">
+          <h2>Hi, I'm Naveen Ch,</h2>
+          <h1>UI/UX Designer</h1>
+          <p>
+            Hyderabad based designer with 3+ years of experience in designing
+            webistes and applications with good user experience and interfaces
+          </p>
+          <div class="banner_left_part_button">
+            <button class="hire_me_button">
+              <a href="#">Hire Me</a>
+            </button>
+            <button class="my_works_button">
+              <a href="#">My Works </a>
+            </button>
+          </div>
+        </div>
+        <div class="banner_right_part">
+          <img src="Assets/Images/mypic.jpg" alt="Naveen Picture" />
+        </div>
+      </div>
+    </div>
+
+/* ====== START OF BANNER SECTION ========== */
+
+#banner_section {
+  padding-top: 200px;
+  background-color: var(--primary-bg-colour);
+  /* padding-top: 100px;
+  padding-bottom: 100px; */
+  width: 100vw;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+}
+#banner_container {
+  max-width: var(--max-width);
+  margin: var(--default-margin);
+
+  padding-left: 10%;
+    padding-right: 10%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10vw;
+  align-items: center;
+  justify-items: end;
+}
+@media screen and (max-width: 768px) {
+  #banner_container {
+    gap: 10vh;
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+  }
+}
+.banner_left_part h2 {
+  font-size: var(--heading-1);
+  color: var(--secondary-colour-white);
+  font-weight: var(--medium);
+  line-height: var(--lineheight);
+}
+.banner_left_part h1 {
+  padding-bottom: 0.6rem;
+  font-size: var(--main-headiing);
+  color: var(--primary-colour);
+  font-weight: var(--semi-bold);
+  line-height: var(--lineheight);
+}
+.banner_left_part p {
+  padding-bottom: 1rem;
+  font-size: var(--paragraph-1);
+  color: var(--tertiary-colour);
+  font-weight: var(--regular);
+  line-height: var(--lineheight);
+}
+.banner_left_part_button {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+@media screen and (max-width:425px){
+  .banner_left_part_button{
+    grid-template-columns: 1fr;
+
+  }
+}
+.hire_me_button {
+  width: 100%;
+  height: 4rem;
+  background-color: var(--primary-bg-colour);
+  border: 2px solid var(--secondary-colour-white);
+  position: relative;
+  transition: 0.3s;
+}
+
+.hire_me_button:hover {
+  border: none;
+  background-color: var(--hover-primary-colour);
+}
+.hire_me_button:hover a {
+  color: var(--primary-bg-colour);
+}
+
+.hire_me_button a {
+  color: var(--secondary-colour-white);
+  font-size: var(--button);
+  font-weight: var(--semi-bold);
+}
+.my_works_button {
+  font-size: var(--button);
+  background-color: var(--primary-colour);
+  border: none;
+  transition: 0.3s;
+  height: 4rem;
+}
+.my_works_button a {
+  font-size: var(--button);
+  color: var(--primary-bg-colour);
+  font-weight: var(--semi-bold);
+}
+.my_works_button:hover {
+  background-color: var(--hover-primary-colour);
+}
+@media screen and (max-width:768px){
+  .banner_right_part{
+    text-align: center;
+  }
+}
+
+.banner_right_part img {
+  border-radius: 100%;
+  padding: 1.6rem;
+  border: 2px solid var(--primary-colour);
+
+}
+@media screen and (max-width:768px){
+  
+.banner_right_part img {
+  border-radius: 100vw;
+  padding: 1.6rem;
+  border: 2px solid var(--primary-colour);
+
+}
+}
