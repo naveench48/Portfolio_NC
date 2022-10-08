@@ -172,7 +172,7 @@ section {
   height: 90vh;
 }
 #hero_Container {
-  height: 80vh;
+  /* height: 80vh; */
   max-width: var(--max-width);
   margin: var(--default-margin);
   padding-left: 10%;
