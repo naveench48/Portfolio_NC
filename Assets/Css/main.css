@@ -5,6 +5,7 @@
 :root {
   /*========== Colours ==========*/
   --primary-colour: #00e472;
+  /* #00e472 */
   --hover-primary-colour: #02c262;
   --secondary-colour-white: #ffffff;
   --tertiary-colour: rgba(255, 255, 255, 0.46);
@@ -29,6 +30,8 @@
   --light: 300;
   --thin: 200;
 
+   /*========== Border Radius ==========*/
+  --border-radius-default: 0px;
   /*========== Max-width : Margin ==========*/
   --max-width: 1600px;
   --default-margin: 0px auto;
@@ -215,16 +218,20 @@ section {
 .cta_secondary {
   border: 2px solid var(--secondary-colour-white);
   color: var(--secondary-colour-white);
+  border-radius: var(--border-radius-default);
   background-color: var(--primary-bg-colour);
   font-size: var(--button);
   padding: 1rem;
   font-weight: var(--medium);
   transition: 0.3s ease-in-out;
+
 }
+
 .cta_primary {
   border: 2px solid var(--primary-colour);
   color: var(--primary-bg-colour);
   background-color: var(--primary-colour);
+  border-radius: var(--border-radius-default);
   font-size: var(--button);
   padding: 1rem;
   font-weight: var(--medium);
