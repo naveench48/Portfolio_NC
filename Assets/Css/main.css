@@ -30,7 +30,7 @@
   --light: 300;
   --thin: 200;
 
-   /*========== Border Radius ==========*/
+  /*========== Border Radius ==========*/
   --border-radius-default: 0px;
   /*========== Max-width : Margin ==========*/
   --max-width: 1600px;
@@ -86,7 +86,7 @@
 * {
   font-family: var(--body-font);
 }
-html{
+html {
   scroll-behavior: smooth;
 }
 body {
@@ -94,7 +94,6 @@ body {
   overflow-x: hidden;
   margin: 0px auto;
   font-family: var(--body-font);
-
 }
 h1,
 h2,
@@ -109,6 +108,44 @@ a {
 section {
   margin: 0px auto;
   width: 100vw;
+}
+
+/* ====== Key Frames ========== */
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+
+  0% {
+    transform: translatex(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInLeftCta {
+
+  0% {
+    transform: translatex(-200%);
+    opacity: 0;
+  }
+  50% {
+    transform: translatex(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 /* ====== START OF HEADER SECTION ========== */
@@ -128,8 +165,8 @@ section {
   justify-content: space-between;
   height: 6rem;
 }
-@media screen and (max-width: 426px){
-  #header_container{
+@media screen and (max-width: 426px) {
+  #header_container {
     height: 4rem;
   }
 }
@@ -196,24 +233,32 @@ section {
   color: var(--secondary-colour-white);
   font-weight: var(--medium);
   margin-bottom: 0.4rem;
+  animation: 1s ease-out 0s 1 slideInLeft;
 }
 .hero_section_left h1 {
   font-size: var(--main-headiing);
   font-weight: var(--semi-bold);
   color: var(--primary-colour);
   margin-bottom: 0.6rem;
+  animation: 1s ease-out 0s 1 slideInLeft;
 }
+
+
 .hero_section_left p {
   font-size: var(--paragraph-1);
   font-weight: var(--regular);
   color: var(--tertiary-colour);
   margin-bottom: 1rem;
+  animation: 1.4s ease-out 0s 1 slideInLeft;
 }
 .hero_section_cta {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
   width: 100%;
+  animation: 2.5s ease-out 0s 1 slideInLeftCta;
+  /* animation-delay: 2s; */
+  /* animation-delay: 10s; */
 }
 .cta_secondary {
   border: 2px solid var(--secondary-colour-white);
@@ -224,7 +269,6 @@ section {
   padding: 1rem;
   font-weight: var(--medium);
   transition: 0.3s ease-in-out;
-
 }
 
 .cta_primary {
@@ -242,8 +286,8 @@ section {
   background-color: var(--hover-primary-colour);
   color: var(--primary-bg-colour);
 }
-.cta_secondary:hover{
-  border:2px solid var(--hover-primary-colour);
+.cta_secondary:hover {
+  border: 2px solid var(--hover-primary-colour);
 }
 @media screen and (max-width: 768px) {
   #hero_Container {
@@ -269,14 +313,14 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: 1s ease-out 0s 1 slideInRight;
 }
+
 .hero_section_img {
   padding: 10px;
   border-radius: 100%;
   width: 300px;
   height: 300px;
-  /* width: 20vw;
-  height: 20vw; */
 }
 @media screen and (max-width: 768px) {
   .hero_section_right {
@@ -285,7 +329,7 @@ section {
 }
 
 @media screen and (max-width: 426px) {
-  .hero_section_right{
+  .hero_section_right {
     margin-bottom: 20px;
   }
   .hero_section_img {
@@ -319,4 +363,3 @@ section {
     height: 50vw;
   }
 } */
-
