@@ -315,7 +315,6 @@ section {
     padding-bottom: 50px;
   }
   .hero_section_cta {
-   
     animation: 1.4s ease-out 0s 1 slideInLeftCta;
   }
 }
