@@ -278,8 +278,8 @@ section {
 .hero_section_cta {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-  width: 100%;
+  gap: 1rem;
+  width: 70%;
   /* margin-top: 1rem; */
   /* animation: 1.7s ease-out 0s 1 slideInLeft; */
 }
@@ -293,6 +293,7 @@ section {
   padding: 0.8rem;
   font-weight: var(--medium);
   transition: 0.3s ease-in-out;
+  border-radius: 2rem;
 }
 
 .cta_primary {
@@ -304,6 +305,7 @@ section {
   padding: 0.8rem;
   font-weight: var(--medium);
   transition: 0.3s ease-in-out;
+  border-radius: 2rem;
 }
 .cta_secondary:hover,
 .cta_primary:hover {
@@ -314,6 +316,7 @@ section {
 
 @media screen and (max-width: 768px) {
   .hero_section_cta {
+    width: 100%;
     /* animation: 1.4s ease-out 0s 1 slideInLeftCta; */
   }
 }
@@ -437,6 +440,7 @@ section {
   font-weight: var(--medium);
   transition: 0.3s ease-in-out;
   text-align: center;
+  border-radius: 2rem;
 }
 .aboutme_cta_resume:hover{
   background-color: var(--hover-primary-colour);
@@ -462,7 +466,7 @@ section {
 .aboutme_cta_resume a i {
   padding-left: 1rem;
 }
-/* ====== END OF About Me SECTION ========== */
+
 
 
 /* --- aboutme more ---- */
@@ -497,3 +501,5 @@ section {
   padding-left: 15px;
   color: var(--primary-colour);
 }
+
+/* ====== END OF About Me SECTION ========== */
