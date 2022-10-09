@@ -5,7 +5,7 @@
 :root {
   /*========== Colours ==========*/
   --primary-colour: #00e472;
-  /* #00e472 */
+  /* #00e472 ||| #FEFE30 */
   --hover-primary-colour: #02c262;
   --secondary-colour-white: #ffffff;
   --tertiary-colour: rgba(255, 255, 255, 0.46);
@@ -33,7 +33,7 @@
   /*========== Border Radius ==========*/
   --border-radius-default: 0px;
   /*========== Max-width : Margin ==========*/
-  --max-width: 1600px;
+  --max-width: 100rem;
   --default-margin: 0px auto;
 }
 @media screen and (max-width: 1440px) {
@@ -122,7 +122,6 @@ section {
 }
 
 @keyframes slideInLeft {
-
   0% {
     transform: translatex(-100%);
     opacity: 0;
@@ -133,9 +132,8 @@ section {
   }
 }
 @keyframes slideInLeftCta {
-
   0% {
-    transform: translatex(-200%);
+    transform: translatex(-150%);
     opacity: 0;
   }
   50% {
@@ -147,26 +145,25 @@ section {
     opacity: 1;
   }
 }
-@media  screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
   @keyframes slideInLeftCta {
-
     0% {
       transform: translatex(-100%);
       opacity: 0;
     }
- 
+
     100% {
       transform: translateX(0);
       opacity: 1;
     }
   }
-  
 }
 /* ====== START OF HEADER SECTION ========== */
 #header_section {
   background-color: var(--primary-bg-colour);
   position: sticky;
   top: 0;
+  z-index: 100;
   border-bottom: 0.1px solid rgba(255, 255, 255, 0.185);
 }
 #header_container {
@@ -202,7 +199,7 @@ section {
 .menu-list-items a:hover {
   color: var(--primary-colour);
   border-bottom: 2px solid var(--primary-colour);
-  padding-bottom: 36px;
+  padding-bottom: 2.25rem;
 }
 @media screen and (max-width: 768px) {
   .Menu-List {
@@ -242,39 +239,45 @@ section {
   justify-items: end;
   align-items: center;
 }
+@media screen and (max-width: 768px) {
+  #hero_Container {
+    padding-top: 5vh;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    height: auto;
+    padding-bottom: 50px;
+  }
+}
 .hero_section_left h2 {
   font-size: var(--heading-1);
   color: var(--secondary-colour-white);
   font-weight: var(--medium);
   margin-bottom: 0.4rem;
-  animation: 1s ease-out 0s 1 slideInLeft;
+  /* animation: 1s ease-out 0s 1 slideInLeft; */
 }
 .hero_section_left h1 {
   font-size: var(--main-headiing);
   font-weight: var(--semi-bold);
   color: var(--primary-colour);
   margin-bottom: 0.6rem;
-  animation: 1s ease-out 0s 1 slideInLeft;
+  /* animation: 1s ease-out 0s 1 slideInLeft; */
 }
-
 
 .hero_section_left p {
   font-size: var(--paragraph-1);
   font-weight: var(--regular);
   color: var(--tertiary-colour);
   margin-bottom: 1rem;
-  animation: 1.4s ease-out 0s 1 slideInLeft;
+  /* animation: 1.4s ease-out 0s 1 slideInLeft; */
 }
 .hero_section_cta {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
   width: 100%;
-  animation: 2.5s ease-out 0s 1 slideInLeftCta;
-  /* animation-delay: 2s; */
-  /* animation-delay: 10s; */
+  /* animation: 1.7s ease-out 0s 1 slideInLeft; */
 }
-
 
 .cta_secondary {
   border: 2px solid var(--secondary-colour-white);
@@ -301,29 +304,19 @@ section {
 .cta_primary:hover {
   background-color: var(--hover-primary-colour);
   color: var(--primary-bg-colour);
-}
-.cta_secondary:hover {
   border: 2px solid var(--hover-primary-colour);
 }
+
 @media screen and (max-width: 768px) {
-  #hero_Container {
-    padding-top: 5vh;
-    grid-template-columns: 1fr;
-    justify-items: center;
-    text-align: center;
-    height: auto;
-    padding-bottom: 50px;
-  }
   .hero_section_cta {
-   
-    animation: 1.4s ease-out 0s 1 slideInLeftCta;
+    /* animation: 1.4s ease-out 0s 1 slideInLeftCta; */
   }
 }
 @media screen and (max-width: 426px) {
   .hero_section_cta {
     gap: 0.8rem;
     grid-template-columns: 1fr;
-    animation: 1.4s ease-out 0s 1 slideInLeftCta;
+    /* animation: 1.5s ease-out 0s 1 slideInLeftCta; */
   }
 }
 
@@ -335,14 +328,14 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: 1s ease-out 0s 1 slideInRight;
+  /* animation: 1s ease-out 0s 1 slideInRight; */
 }
 
 .hero_section_img {
   padding: 10px;
   border-radius: 100%;
-  width: 300px;
-  height: 300px;
+  width: 18.75rem;
+  height: 18.75rem;
 }
 @media screen and (max-width: 768px) {
   .hero_section_right {
@@ -352,36 +345,114 @@ section {
 
 @media screen and (max-width: 426px) {
   .hero_section_right {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
   }
   .hero_section_img {
     width: 70vw;
     height: 70vw;
-    /* width: 20vw;
-    height: 20vw; */
   }
 }
-/* @media screen and (max-width: 1024px) {
-  .hero_section_img {
-    width: 25vw;
-    height: 25vw;
-  }
-}
-@media screen and (max-width: 768px) {
-  .hero_section_img {
-    width: 35vw;
-    height: 35vw;
-  }
-}
-@media screen and (max-width: 600px) {
-  .hero_section_img {
-    width: 40vw;
-    height: 40vw;
-  }
+
+/* ====== END OF HERO SECTION ========== */
+
+/* ====== START OF About Me SECTION ========== */
+
+#aboutme_section {
+  background-color: var(--primary-bg-colour);
+  /* padding-top: 3.125rem;
+  padding-bottom: 3.125rem; */
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  margin-top: -5px;
 }
 @media screen and (max-width: 426px) {
-  .hero_section_img {
-    width: 50vw;
-    height: 50vw;
+  #aboutme_section {
+    height: auto;
+    padding-top: 3.125rem;
+    padding-bottom: 3.125rem;
   }
+}
+#aboutme_container {
+  max-width: var(--max-width);
+  margin: var(--default-margin);
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.aboutme_text h2 {
+  font-size: var(--heading-1);
+  color: var(--secondary-colour-white);
+  font-weight: var(--medium);
+  margin-bottom: 1rem;
+
+  width: fit-content;
+}
+.aboutme_text p {
+  font-size: var(--paragraph-1);
+  color: var(--tertiary-colour);
+  text-align: justify;
+}
+.aboutme_icons_tab {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.aboutme_icons svg {
+  fill: var(--tertiary-colour);
+  width: 2rem;
+  height: 2rem;
+  transition: 0.3s ease;
+}
+.aboutme_icons svg:hover {
+  fill: var(--secondary-colour-white);
+}
+
+/* .aboutme_icons:nth-child(1)::after {
+  content: "Adobe XD";
+  padding-left: 2rem;
+  display: none;
+  transition: 0.5s ease;
+}
+
+.aboutme_icons:hover:after {
+  display: contents;
+  color: var(--secondary-colour-white);
+  font-size: var(--paragraph-1);
+  padding-left: 10px;
 } */
+
+/* --- aboutme more ---- */
+.aboutme_more_section {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 1rem;
+}
+.aboutme_more {
+  border-bottom: 1px solid var(--secondary-colour-white);
+}
+.aboutme_more:hover {
+  border-bottom: 1px solid var(--primary-colour);
+}
+.aboutme_more a {
+  color: var(--secondary-colour-white);
+  font-weight: var(--regular);
+  font-size: var(--paragraph-1);
+}
+.aboutme_more a:hover {
+  color: var(--primary-colour);
+}
+.aboutme_more a::after {
+  content: ">";
+  opacity: 0;
+  color: var(--secondary-colour-white);
+  padding-left: -10px;
+  transition: 0.3s ease;
+}
+.aboutme_more a:hover:after {
+  opacity: 1;
+  padding-left: 15px;
+  color: var(--primary-colour);
+}
+/* ====== END OF About Me SECTION ========== */
