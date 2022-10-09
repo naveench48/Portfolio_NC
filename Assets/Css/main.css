@@ -4,7 +4,7 @@
 /*========== START OF VARIABLES CSS ==========*/
 :root {
   /*========== Colours ==========*/
-  --primary-colour: #00e472;
+  --primary-colour:  #00e472;
   /* #00e472 ||| #FEFE30 */
   --hover-primary-colour: #02c262;
   --secondary-colour-white: #ffffff;
@@ -108,6 +108,10 @@ a {
 section {
   margin: 0px auto;
   width: 100vw;
+}
+::selection {
+  color: var(--primary-bg-colour);
+  background: var(--primary-colour);
 }
 
 /* ====== Key Frames ========== */
@@ -268,7 +272,7 @@ section {
   font-size: var(--paragraph-1);
   font-weight: var(--regular);
   color: var(--tertiary-colour);
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   /* animation: 1.4s ease-out 0s 1 slideInLeft; */
 }
 .hero_section_cta {
@@ -276,6 +280,7 @@ section {
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
   width: 100%;
+  /* margin-top: 1rem; */
   /* animation: 1.7s ease-out 0s 1 slideInLeft; */
 }
 
@@ -285,7 +290,7 @@ section {
   border-radius: var(--border-radius-default);
   background-color: var(--primary-bg-colour);
   font-size: var(--button);
-  padding: 1rem;
+  padding: 0.8rem;
   font-weight: var(--medium);
   transition: 0.3s ease-in-out;
 }
@@ -296,7 +301,7 @@ section {
   background-color: var(--primary-colour);
   border-radius: var(--border-radius-default);
   font-size: var(--button);
-  padding: 1rem;
+  padding: 0.8rem;
   font-weight: var(--medium);
   transition: 0.3s ease-in-out;
 }
@@ -392,11 +397,21 @@ section {
   color: var(--tertiary-colour);
   text-align: justify;
 }
+.aboutme_text img{
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  mix-blend-mode: darken;
+}
+.aboutme_text img:hover{
+  mix-blend-mode: normal;
+}
 .aboutme_icons_tab {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .aboutme_icons svg {
@@ -408,20 +423,6 @@ section {
 .aboutme_icons svg:hover {
   fill: var(--secondary-colour-white);
 }
-
-/* .aboutme_icons:nth-child(1)::after {
-  content: "Adobe XD";
-  padding-left: 2rem;
-  display: none;
-  transition: 0.5s ease;
-}
-
-.aboutme_icons:hover:after {
-  display: contents;
-  color: var(--secondary-colour-white);
-  font-size: var(--paragraph-1);
-  padding-left: 10px;
-} */
 
 /* --- aboutme more ---- */
 .aboutme_more_section {
@@ -454,5 +455,43 @@ section {
   opacity: 1;
   padding-left: 15px;
   color: var(--primary-colour);
+}
+
+/* --about me resume cta -- */
+
+.aboutme_cta_resume {
+  width: fit-content;
+  border: 2px solid var(--secondary-colour-white);
+  border-radius: var(--border-radius-default);
+  background-color: var(--primary-bg-colour);
+  font-size: var(--button);
+  padding: 0.8rem 3rem;
+  font-weight: var(--medium);
+  transition: 0.3s ease-in-out;
+  text-align: center;
+}
+.aboutme_cta_resume:hover{
+  background-color: var(--hover-primary-colour);
+  color: var(--primary-bg-colour);
+  border: 2px solid var(--hover-primary-colour);
+  transition: 0.3s ease-in-out;
+}
+.aboutme_cta_resume:hover  a{
+  color: var(--primary-bg-colour)
+}
+
+@media screen and (max-width: 426px) {
+  .aboutme_cta_resume {
+    width: 100%;
+    padding: 0.8rem 0px;
+  }
+}
+.aboutme_cta_resume a {
+  color: var(--secondary-colour-white);
+  text-decoration: none;
+}
+
+.aboutme_cta_resume a i {
+  padding-left: 1rem;
 }
 /* ====== END OF About Me SECTION ========== */
