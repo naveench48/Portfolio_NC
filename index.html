@@ -11,11 +11,19 @@
       media="screen"
       href="Assets/Css/main.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/brands.min.css"
+      integrity="sha512-+oRH6u1nDGSm3hH8poU85YFIVTdSnS2f+texdPGrURaJh8hzmhMiZrQth6l56P4ZQmxeZzd2DqVEMqQoJ8J89A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script src="Assets/Js/script.js" defer></script>
 
     <!-- Components -->
     <script src="Components/header.js" defer></script>
     <script src="Components/footer.js" defer></script>
+    <script src="Components/aboutmeicons.js" defer></script>
     <!-- Components -->
   </head>
   <body>
@@ -51,7 +59,26 @@
 
     <!-- ========= ABOUT ME SECTION ===== -->
     <div id="aboutme_section">
-      <div id="aboutme_container"></div>
+      <div id="aboutme_container">
+        <div class="aboutme_text">
+          <h2>About Me</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+            et dolore magna aliquyam erat, sed diam
+          </p>
+          <aboutme-icons></aboutme-icons>
+          <div class="aboutme_more_section">
+            <div class="aboutme_more">
+              <a href="#">Know More</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
