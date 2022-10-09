@@ -424,38 +424,6 @@ section {
   fill: var(--secondary-colour-white);
 }
 
-/* --- aboutme more ---- */
-.aboutme_more_section {
-  display: flex;
-  justify-content: flex-end;
-  padding-top: 1rem;
-}
-.aboutme_more {
-  border-bottom: 1px solid var(--secondary-colour-white);
-}
-.aboutme_more:hover {
-  border-bottom: 1px solid var(--primary-colour);
-}
-.aboutme_more a {
-  color: var(--secondary-colour-white);
-  font-weight: var(--regular);
-  font-size: var(--paragraph-1);
-}
-.aboutme_more a:hover {
-  color: var(--primary-colour);
-}
-.aboutme_more a::after {
-  content: ">";
-  opacity: 0;
-  color: var(--secondary-colour-white);
-  padding-left: -10px;
-  transition: 0.3s ease;
-}
-.aboutme_more a:hover:after {
-  opacity: 1;
-  padding-left: 15px;
-  color: var(--primary-colour);
-}
 
 /* --about me resume cta -- */
 
@@ -495,3 +463,37 @@ section {
   padding-left: 1rem;
 }
 /* ====== END OF About Me SECTION ========== */
+
+
+/* --- aboutme more ---- */
+.aboutme_more_section {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 1rem;
+}
+.aboutme_more {
+  border-bottom: 1px solid var(--secondary-colour-white);
+}
+.aboutme_more:hover {
+  border-bottom: 1px solid var(--primary-colour);
+}
+.aboutme_more a {
+  color: var(--secondary-colour-white);
+  font-weight: var(--regular);
+  font-size: var(--paragraph-1);
+}
+.aboutme_more a:hover {
+  color: var(--primary-colour);
+}
+.aboutme_more a::after {
+  content: ">";
+  opacity: 0;
+  color: var(--secondary-colour-white);
+  padding-left: -10px;
+  transition: 0.3s ease;
+}
+.aboutme_more a:hover:after {
+  opacity: 1;
+  padding-left: 15px;
+  color: var(--primary-colour);
+}
