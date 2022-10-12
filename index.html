@@ -1,99 +1,101 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>NC</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen"
-      href="Assets/Css/main.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="icon" type="image/x-icon" href="/Assets/Favicon/favicon.ico" />
-    <script src="Assets/Js/script.js" defer></script>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>NC</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			media="screen"
+			href="Assets/Css/main.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+			integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <!-- lottefiles -->
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <!-- lottefiles -->
+		<link rel="icon" type="image/x-icon" href="/Assets/Favicon/favicon.ico" />
+		<script src="Assets/Js/script.js" defer></script>
 
-    <!-- Components -->
-    <script src="Components/header.js" defer></script>
-    <script src="Components/footer.js" defer></script>
-    <script src="Components/aboutmeicons.js" defer></script>
-    <!-- Components -->
-  </head>
-  <body>
-    <!-- ========= HEADER SECTION ===== -->
+		<!-- lottefiles -->
+		<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+		<!-- lottefiles -->
 
-    <main-header></main-header>
+		<!-- Components -->
+		<script src="Components/header.js" defer></script>
+		<script src="Components/footer.js" defer></script>
+		<script src="Components/aboutmeicons.js" defer></script>
+		<!-- Components -->
+	</head>
+	<body>
+		<!-- ========= HEADER SECTION ===== -->
 
-    <!-- ========= HERO SECTION ===== -->
-    <div id="hero_section">
-      <div id="hero_Container">
-        <div class="hero_section_left">
-          <h2>Hi, I'm Naveen Ch, 👋</h2>
-          <h1>UI/UX Designer</h1>
-          <p>
-            Hyderabad based designer with over 3 years of experience in
-            designing conceptualizing and crafting digital products, helping
-            businesses and non-profits expand their capacity for impact
-          </p>
-          <div class="hero_section_cta">
-            <button class="cta_secondary">Hire Me</button>
-            <button class="cta_primary">My Works</button>
-          </div>
-        </div>
-        <div class="hero_section_right">
-          <img
-            class="hero_section_img"
-            src="./Assets/Images/mypic_2.jpg"
-            alt="My profile Picture"
-          />
-        </div>
-      </div>
-    </div>
+		<main-header></main-header>
 
-    <!-- ========= ABOUT ME SECTION ===== -->
-    <div id="aboutme_section">
-      <div id="aboutme_container">
-        <div class="aboutme_text">
-          <h2>About Me</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-            et dolore magna aliquyam erat, sed diam
-          </p>
-          <aboutme-icons></aboutme-icons>
+		<!-- ========= HERO SECTION ===== -->
+		<div id="hero_section">
+			<div id="hero_Container">
+				<div class="hero_section_left">
+					<h2>Hi, I'm Naveen Ch, 👋</h2>
+					<h1>UI/UX Designer</h1>
+					<p>
+						Hyderabad based designer with over 3 years of experience in
+						designing conceptualizing and crafting digital products, helping
+						businesses and non-profits expand their capacity for impact
+					</p>
+					<div class="hero_section_cta">
+						<!-- <button class="cta_secondary">Hire Me</button>
+            <button class="cta_primary">My Works</button> -->
+						<div class="cta_secondary"><a href="#">Hire Me</a></div>
+						<div class="cta_primary"><a href="#">My Works</a></div>
+					</div>
+				</div>
+				<div class="hero_section_right">
+					<img
+						class="hero_section_img"
+						src="./Assets/Images/mypic_2.jpg"
+						alt="My profile Picture"
+					/>
+				</div>
+			</div>
 
-          <div class="aboutme_cta_resume">
-            <a
-              href="Assets/Resume/Naveen_Ch_Resume.pdf"
-              attributes-list
-              download="Naveen Ch Resume"
-              target="_blank"
-              >Resume <i class="fa-solid fa-arrow-down"></i>
-            </a>
-          </div>
-          <div class="aboutme_more_section">
-            <div class="aboutme_more">
-              <a href="#">Know More</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
+		<!-- ========= ABOUT ME SECTION ===== -->
+		<div id="aboutme_section">
+			<div id="aboutme_container">
+				<div class="aboutme_text">
+					<h2>About Me</h2>
+					<p>
+						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+						nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+						erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+						et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+						Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+						sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+						et dolore magna aliquyam erat, sed diam
+					</p>
+					<aboutme-icons></aboutme-icons>
+
+					<div class="aboutme_cta_resume">
+						<a
+							href="Assets/Resume/Naveen_Ch_Resume.pdf"
+							attributes-list
+							download="Naveen Ch Resume"
+							target="_blank"
+							>Resume <i class='bx bxs-download' ></i></a>
+					</div>
+					<div class="aboutme_more_section">
+						<div class="aboutme_more">
+							<a href="#">Know More</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
