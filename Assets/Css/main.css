@@ -596,6 +596,7 @@ section {
   background-color: var(--primary-bg-colour);
   padding: 3rem 4rem;
 }
+
 @media screen and (max-width: 426px) {
   .skills_cards {
     background-color: var(--primary-bg-colour);
