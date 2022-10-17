@@ -4,9 +4,9 @@
 /*========== START OF VARIABLES CSS ==========*/
 :root {
   /*========== Colours ==========*/
-  --primary-colour:  #00e472;
-  /* #00e472 ||| #FEFE30 */
-  --hover-primary-colour: #02c262;
+  --primary-colour: #00e472;
+  /* #00e472 ||| #FEFE30 || 02c262 */
+  --hover-primary-colour: #16ff8a;
   --secondary-colour-white: #ffffff;
   --tertiary-colour: rgba(255, 255, 255, 0.46);
   --primary-bg-colour: #181818;
@@ -18,7 +18,7 @@
   --main-headiing: 2.75rem;
   --heading-1: 2rem;
   --heading-2: 1.25rem;
-  --heading-3: 0, 875rem;
+  --heading-3: 0.875rem;
   --paragraph-1: 1rem;
   --button: 1.5rem;
 
@@ -33,29 +33,29 @@
   /*========== Border Radius ==========*/
   --border-radius-default: 0px;
   /*========== Max-width : Margin ==========*/
-  --max-width: 100rem;
+  --max-width: 87rem;
   --default-margin: 0px auto;
 }
 @media screen and (max-width: 1440px) {
   :root {
     /*========== Font and typography ==========*/
-    --main-headiing: 2.75rem;
+    --main-headiing: 2.5rem;
     --heading-1: 2rem;
     --heading-2: 1.25rem;
     --heading-3: 0.875rem;
     --paragraph-1: 1rem;
-    --button: 1.5rem;
+    --button: 1.2rem;
   }
 }
 @media screen and (max-width: 1024px) {
   :root {
     /*========== Font and typography ==========*/
-    --main-headiing: 2.5rem;
+    --main-headiing: 2.3rem;
     --heading-1: 1.8rem;
     --heading-2: 1.1rem;
     --heading-3: 0.8rem;
     --paragraph-1: 0.9rem;
-    --button: 1.2rem;
+    --button: 1rem;
   }
 }
 @media screen and (max-width: 768px) {
@@ -66,7 +66,7 @@
     --heading-2: 1rem;
     --heading-3: 0.7rem;
     --paragraph-1: 0.8rem;
-    --button: 1rem;
+    --button: 0.875rem;
   }
 }
 
@@ -78,7 +78,7 @@
     --heading-2: 0.8rem;
     --heading-3: 0.6rem;
     --paragraph-1: 0.8rem;
-    --button: 1rem;
+    --button: 0.875rem;
   }
 }
 
@@ -286,7 +286,6 @@ section {
 
 .cta_secondary {
   border: 2px solid var(--secondary-colour-white);
-  color: var(--secondary-colour-white);
   border-radius: var(--border-radius-default);
   background-color: var(--primary-bg-colour);
   font-size: var(--button);
@@ -294,24 +293,52 @@ section {
   font-weight: var(--medium);
   transition: 0.3s ease-in-out;
   border-radius: 2rem;
+  text-align: center;
+}
+.cta_secondary a {
+  color: var(--secondary-colour-white);
 }
 
 .cta_primary {
   border: 2px solid var(--primary-colour);
-  color: var(--primary-bg-colour);
   background-color: var(--primary-colour);
   border-radius: var(--border-radius-default);
   font-size: var(--button);
   padding: 0.8rem;
   font-weight: var(--medium);
-  transition: 0.3s ease-in-out;
+  transition: 0.3s ease;
   border-radius: 2rem;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+}
+.cta_primary a {
+  color: var(--primary-bg-colour);
+}
+.cta_primary a::after,
+.cta_secondary a::after {
+  content: ">";
+  padding-left: -100px;
+  opacity: 0;
+  display: none;
+  transition: 0.3s ease;
+}
+.cta_primary a:hover:after,
+.cta_secondary a:hover:after {
+  padding-left: 10px;
+  transition: 0.3s ease;
+  display: inline;
+  opacity: 1;
 }
 .cta_secondary:hover,
 .cta_primary:hover {
   background-color: var(--hover-primary-colour);
-  color: var(--primary-bg-colour);
+
   border: 2px solid var(--hover-primary-colour);
+}
+.cta_secondary:hover a,
+.cta_primary:hover a {
+  color: var(--primary-bg-colour);
 }
 
 @media screen and (max-width: 768px) {
@@ -342,12 +369,22 @@ section {
 .hero_section_img {
   padding: 10px;
   border-radius: 100%;
-  width: 18.75rem;
-  height: 18.75rem;
+  width: 24rem;
+  height: 24rem;
+}
+@media screen and (max-width: 1024px) {
+  .hero_section_img {
+    width: 18.75rem;
+    height: 18.75rem;
+  }
 }
 @media screen and (max-width: 768px) {
   .hero_section_right {
     margin-top: 2rem;
+  }
+  .hero_section_img {
+    width: 18.75rem;
+    height: 18.75rem;
   }
 }
 
@@ -374,7 +411,7 @@ section {
   align-items: center;
   margin-top: -5px;
 }
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 768px) {
   #aboutme_section {
     height: auto;
     padding-top: 3.125rem;
@@ -399,16 +436,9 @@ section {
   font-size: var(--paragraph-1);
   color: var(--tertiary-colour);
   text-align: justify;
+  line-height: 1.6;
 }
-.aboutme_text img{
-  width: 50px;
-  height: 50px;
-  border-radius: 4px;
-  mix-blend-mode: darken;
-}
-.aboutme_text img:hover{
-  mix-blend-mode: normal;
-}
+
 .aboutme_icons_tab {
   display: flex;
   flex-wrap: wrap;
@@ -419,14 +449,13 @@ section {
 
 .aboutme_icons svg {
   fill: var(--tertiary-colour);
-  width: 2rem;
-  height: 2rem;
+  width: 1.7rem;
+  height: 1.7rem;
   transition: 0.3s ease;
 }
 .aboutme_icons svg:hover {
   fill: var(--secondary-colour-white);
 }
-
 
 /* --about me resume cta -- */
 
@@ -441,21 +470,27 @@ section {
   transition: 0.3s ease-in-out;
   text-align: center;
   border-radius: 2rem;
+  margin-top: 3rem;
 }
-.aboutme_cta_resume:hover{
+
+.aboutme_cta_resume:hover .resume_icon {
+  display: inline;
+}
+.aboutme_cta_resume:hover {
   background-color: var(--hover-primary-colour);
   color: var(--primary-bg-colour);
   border: 2px solid var(--hover-primary-colour);
   transition: 0.3s ease-in-out;
 }
-.aboutme_cta_resume:hover  a{
-  color: var(--primary-bg-colour)
+.aboutme_cta_resume:hover a {
+  color: var(--primary-bg-colour);
 }
 
 @media screen and (max-width: 426px) {
   .aboutme_cta_resume {
     width: 100%;
     padding: 0.8rem 0px;
+    margin-top: 1.5rem;
   }
 }
 .aboutme_cta_resume a {
@@ -466,8 +501,6 @@ section {
 .aboutme_cta_resume a i {
   padding-left: 1rem;
 }
-
-
 
 /* --- aboutme more ---- */
 .aboutme_more_section {
@@ -503,3 +536,95 @@ section {
 }
 
 /* ====== END OF About Me SECTION ========== */
+
+/* ====== START OF Skills SECTION ========== */
+
+#skills_section {
+  background-color: var(--secondary-bg-colour);
+  /* padding-top: 3.125rem;
+  padding-bottom: 3.125rem; */
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: -5px;
+}
+@media screen and (max-width: 768px) {
+  #skills_section {
+    height: auto;
+    padding-top: 3.125rem;
+    padding-bottom: 3.125rem;
+    display: block;
+  }
+}
+#skills_container {
+  max-width: var(--max-width);
+  margin: var(--default-margin);
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.skills_text h2 {
+  font-size: var(--heading-1);
+  color: var(--secondary-colour-white);
+  font-weight: var(--medium);
+  margin-bottom: 1rem;
+  /* width: fit-content; */
+}
+
+.skills_card_content {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+@media screen and (max-width: 1400px) {
+  .skills_card_content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 768px) {
+  .skills_card_content {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+.skills_cards {
+  background-color: var(--primary-bg-colour);
+  padding: 3rem 4rem;
+}
+
+@media screen and (max-width: 426px) {
+  .skills_cards {
+    background-color: var(--primary-bg-colour);
+    padding: 2rem;
+  }
+}
+
+.skills_card_icon svg {
+  width: 2rem;
+}
+.skills_cards h3 {
+  color: var(--secondary-colour-white);
+  font-size: var(--heading-2);
+  font-weight: var(--semi-bold);
+  margin-top: 1.5rem;
+}
+.skills_cards p {
+  font-size: var(--paragraph-1);
+  color: var(--tertiary-colour);
+  text-align: left;
+  line-height: 1.6;
+  margin-bottom: 0px;
+  margin-top: 0.2rem;
+  /* display: none; */
+}
+.skills_card_js {
+  opacity: 0.5;
+}
+.skills_icons {
+  margin-top: 2rem;
+}
