@@ -4,7 +4,7 @@
 /*========== START OF VARIABLES CSS ==========*/
 :root {
   /*========== Colours ==========*/
-  --primary-colour:  #00e472;
+  --primary-colour: #00e472;
   /* #00e472 ||| #FEFE30 || 02c262 */
   --hover-primary-colour: #16ff8a;
   --secondary-colour-white: #ffffff;
@@ -18,7 +18,7 @@
   --main-headiing: 2.75rem;
   --heading-1: 2rem;
   --heading-2: 1.25rem;
-  --heading-3: 0, 875rem;
+  --heading-3: 0.875rem;
   --paragraph-1: 1rem;
   --button: 1.5rem;
 
@@ -295,9 +295,8 @@ section {
   border-radius: 2rem;
   text-align: center;
 }
-.cta_secondary a{
+.cta_secondary a {
   color: var(--secondary-colour-white);
- 
 }
 
 .cta_primary {
@@ -312,35 +311,33 @@ section {
   text-align: center;
   cursor: pointer;
   position: relative;
-  
 }
-.cta_primary a{
+.cta_primary a {
   color: var(--primary-bg-colour);
 }
-.cta_primary a::after, .cta_secondary a::after{
-  content:">";
+.cta_primary a::after,
+.cta_secondary a::after {
+  content: ">";
   padding-left: -100px;
   opacity: 0;
   display: none;
   transition: 0.3s ease;
-
 }
-.cta_primary a:hover:after, .cta_secondary a:hover:after{
+.cta_primary a:hover:after,
+.cta_secondary a:hover:after {
   padding-left: 10px;
   transition: 0.3s ease;
   display: inline;
   opacity: 1;
- 
- 
 }
 .cta_secondary:hover,
-.cta_primary:hover  {
+.cta_primary:hover {
   background-color: var(--hover-primary-colour);
 
   border: 2px solid var(--hover-primary-colour);
 }
 .cta_secondary:hover a,
-.cta_primary:hover a{
+.cta_primary:hover a {
   color: var(--primary-bg-colour);
 }
 
@@ -375,7 +372,7 @@ section {
   width: 24rem;
   height: 24rem;
 }
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px) {
   .hero_section_img {
     width: 18.75rem;
     height: 18.75rem;
@@ -439,6 +436,7 @@ section {
   font-size: var(--paragraph-1);
   color: var(--tertiary-colour);
   text-align: justify;
+  line-height: 1.6;
 }
 
 .aboutme_icons_tab {
@@ -459,7 +457,6 @@ section {
   fill: var(--secondary-colour-white);
 }
 
-
 /* --about me resume cta -- */
 
 .aboutme_cta_resume {
@@ -473,26 +470,27 @@ section {
   transition: 0.3s ease-in-out;
   text-align: center;
   border-radius: 2rem;
-
+  margin-top: 3rem;
 }
 
-.aboutme_cta_resume:hover .resume_icon{
+.aboutme_cta_resume:hover .resume_icon {
   display: inline;
 }
-.aboutme_cta_resume:hover{
+.aboutme_cta_resume:hover {
   background-color: var(--hover-primary-colour);
   color: var(--primary-bg-colour);
   border: 2px solid var(--hover-primary-colour);
   transition: 0.3s ease-in-out;
 }
-.aboutme_cta_resume:hover  a{
-  color: var(--primary-bg-colour)
+.aboutme_cta_resume:hover a {
+  color: var(--primary-bg-colour);
 }
 
 @media screen and (max-width: 426px) {
   .aboutme_cta_resume {
     width: 100%;
     padding: 0.8rem 0px;
+    margin-top: 1.5rem;
   }
 }
 .aboutme_cta_resume a {
@@ -503,8 +501,6 @@ section {
 .aboutme_cta_resume a i {
   padding-left: 1rem;
 }
-
-
 
 /* --- aboutme more ---- */
 .aboutme_more_section {
@@ -541,4 +537,93 @@ section {
 
 /* ====== END OF About Me SECTION ========== */
 
+/* ====== START OF Skills SECTION ========== */
 
+#skills_section {
+  background-color: var(--secondary-bg-colour);
+  /* padding-top: 3.125rem;
+  padding-bottom: 3.125rem; */
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: -5px;
+}
+@media screen and (max-width: 768px) {
+  #skills_section {
+    height: auto;
+    padding-top: 3.125rem;
+    padding-bottom: 3.125rem;
+    display: block;
+  }
+}
+#skills_container {
+  max-width: var(--max-width);
+  margin: var(--default-margin);
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.skills_text h2 {
+  font-size: var(--heading-1);
+  color: var(--secondary-colour-white);
+  font-weight: var(--medium);
+  margin-bottom: 1rem;
+  /* width: fit-content; */
+}
+
+.skills_card_content {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+@media screen and (max-width: 1400px) {
+  .skills_card_content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 768px) {
+  .skills_card_content {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+.skills_cards {
+  background-color: var(--primary-bg-colour);
+  padding: 3rem 4rem;
+}
+@media screen and (max-width: 426px) {
+  .skills_cards {
+    background-color: var(--primary-bg-colour);
+    padding: 2rem;
+  }
+}
+
+.skills_card_icon svg {
+  width: 2rem;
+}
+.skills_cards h3 {
+  color: var(--secondary-colour-white);
+  font-size: var(--heading-2);
+  font-weight: var(--semi-bold);
+  margin-top: 1.5rem;
+}
+.skills_cards p {
+  font-size: var(--paragraph-1);
+  color: var(--tertiary-colour);
+  text-align: left;
+  line-height: 1.6;
+  margin-bottom: 0px;
+  margin-top: 0.2rem;
+  /* display: none; */
+}
+.skills_card_js {
+  opacity: 0.5;
+}
+.skills_icons {
+  margin-top: 2rem;
+}
