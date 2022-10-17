@@ -595,6 +595,24 @@ section {
 .skills_cards {
   background-color: var(--primary-bg-colour);
   padding: 3rem 4rem;
+  transition: 0.3s ease;
+  border-radius: 0.6rem;
+}
+.skills_cards:hover{
+  background-color: var(--primary-colour);
+ 
+}
+.skills_cards:hover > .skills_card_icon svg{
+  fill: var(--primary-bg-colour)
+}
+.skills_cards:hover > h3{
+  color:  var(--primary-bg-colour)
+}
+.skills_cards:hover > p{
+  color:  var(--primary-bg-colour)
+}
+.skills_cards:hover > .skills_cards .skills_card_js{
+  color:  var(--primary-bg-colour)
 }
 
 @media screen and (max-width: 426px) {
@@ -606,6 +624,8 @@ section {
 
 .skills_card_icon svg {
   width: 2rem;
+  fill: var(--primary-colour);
+
 }
 .skills_cards h3 {
   color: var(--secondary-colour-white);
@@ -626,5 +646,11 @@ section {
   opacity: 0.5;
 }
 .skills_icons {
-  margin-top: 2rem;
+  margin-top: 3rem;
+
+}
+@media screen and (max-width:768px) {
+  .skills_icons {
+    margin-top: 2rem;
+  }
 }

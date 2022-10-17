@@ -10,7 +10,7 @@ class Header extends HTMLElement {
         <div class="navigation">
           <div class="Menu-List">
             <div class="menu-list-items"><a href="#hero_section">Home</a></div>
-            <div class="menu-list-items"><a href="#">Works</a></div>
+            <div class="menu-list-items"><a href="#skills_cards">Works</a></div>
             <div class="menu-list-items"><a href="#">Resume</a></div>
             <div class="menu-list-items">
               <a href="#aboutme_section">About</a>
